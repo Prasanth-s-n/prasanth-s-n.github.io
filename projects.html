@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>PORTFOLIO</strong></a>
+									
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Projects</h1>
+									</header>
+
+									
+									<hr class="major" />
+
+									<h2>AI based Open Logo Detection for Indian Scenario</h2>
+									<ul>
+									<p><strong>Duration/Period: </strong>3 Months</p>
+									<p><strong>Objective: </strong>The main objective of the work is to create a dataset containing logos of the Indian Companies since most of the current logo detection datasets does not contain the images of the Indian Companies’ Logo. The next objective was to develop a YOLOv5 model and analyze the performance of the model under different open logo detection settings. Our objective also includes the development of GUI for logo detetction and analyze the performance of the GUI as well</p>
+									<p><strong>Tools and Techinque: </strong>YOLOv5 (Used PyTorch implementation by Ultralytics), ImageAnnotationLab (For data annotation), tkinter (For creating the GUI), OpenCV</p>
+									<p><strong>Outcome: </strong>It was observed that the model trained using closed set with the pretrained weights performed better than other models with 74.5 mAP. Model trained using openset configuration 2 with pretrained weights gave higher precision compared to the other models. Our GUI on average, takes around 1.2 seconds to detect, classify and display the image. The GUI was designed in such ways that it only takes in images and model of our choice.</p>
+									</ul>
+									<hr class="major" />
+
+									<h2>Abusive Comment Detection in Tamil using RKS and TF-IDF</h2>
+									<ul>
+										<p><strong>Duration/Period: </strong>1 Month</p>
+										<p><strong>Objective: </strong>To identify whether the given comment is an abusive comment or not.</p>
+										<p><strong>Tools and Techinque: </strong>Feature Extraction is done using the TF-IDF (with three different analyzer) and then these features are projected to higher dimension using Random Kitchen Sink algorithm. We used SVM classifier due to its ability to perform well in higher dimensional data. To solve the class imbalance problem, we used SMOTE to tackle the problem.</p>
+										<p><strong>Outcome: </strong>This work is done as a part of ACL 2022 DravidanLangTech workshop. On evaluating the model (TF-IDF+RKS+SMOTE+SVM) with test data, we obtained the macro F1 score of 0.32 (Secured 1st Place) and 0.25 (Secured 7th Place) for Tamil and Tamil-English respectively.</p>
+										</ul>
+										
+									<hr class="major" />
+
+									<h2>Multimodal Abusive Comment Detection</h2>
+									<ul>
+										<p><strong>Duration/Period: </strong>4 Months</p>
+										<p><strong>Objective: </strong>To classify a given video as either abusive or non-abusive using audio, text and video modalities</p>
+										<p><strong>Tools and Techinque: </strong>Cohen's Kappa, Numpy, Scikit-learn, Librosa, OpenSmile, Inception, OpenCV, sentence_transformers, transformers, TF-IDF, Keras, SVM, Bagging and Boosting Algorithms </p>
+										<p><strong>Outcome: </strong>
+											<p>From Audio Modality: </p>
+											<ul>
+											<p>OpenSmile (ComParE_2016 with Low Level Descriptor)- SVM with RBF Kernel - Accuracy = 0.94
+											</p>
+											<p>LibROSA - Residual Network - Accuracy = 0.89
+											</p>
+										</ul>
+										<p>From Text Modality: </p>
+											<ul>
+											<p>TFIDF (max_features=5000, n_grams=only unigrams, analyzer=word) - XGBoost - Best score in terms of all metrics - (Accuracy, Precision, Recall and F1-Score = 1.00)
+											</p>
+										</ul>
+										<p>From Video Modality: </p>
+											<ul>
+											<p>Feature Extraction (InceptionV3) - Model (GRU) - Accuracy = 1.00
+											</p>
+										</ul>
+										<p>From Text - Audio Multi-Modality: </p>
+											<ul>
+											<p>Stacked Model (Audio (LibROSA + Residual Net) + Text (TF-IDF + ANN)) - Accuracy = 0.9375 (Used Early-Stopping)</p>
+										</ul>
+										<p>From Multi-Modality (Each Modality, 1 channel input): </p>
+											<ul>
+											<p>Results: Training Accuracy - 0.5714 , Validation Accuracy - 0.7778
+											</p>
+										</ul>
+										<p>From Multi-Modality (Each Modality, multiple channel input): </p>
+											<ul>
+											<p>Results: Training Accuracy - 0.9286, Validation Accuracy - 0.8333
+											</p>
+										</ul>
+									</p>
+										</ul>
+										
+									<hr class="major" />
+
+									<h2>FM Broadcasting using ADALM PLUTO and MATLAB (Simulink)</h2>
+									<ul>
+										<p><strong>Duration/Period: </strong>1 Month</p>
+										<p><strong>Objective: </strong>To radio broadcast an audio file and recieve it using FM app in a device</p>
+										<p><strong>Tools and Techinque: </strong>Simulink, ADALM PLUTO</p>
+										<p><strong>Outcome: </strong>Successfully broadcasted an audio file through desired FM channel for upto 1meter radius surrounding</p>
+										</ul>
+										
+									<hr class="major" />
+
+									<h2>Gesture Recognition</h2>
+									<ul>
+										<p><strong>Duration/Period: </strong>1 Month</p>
+										<p><strong>Objective: </strong>To develop a CNN based Gesture Recognition model and to apply different post training
+											quantization technique in order to optimize the ‘.tflite’ model with respect to different aspects such as size and
+											ram consumption.</p>
+										<p><strong>Tools and Techinque: </strong>TensorFlow (To convert Sequential Model to tflite model), Keras (For Implementing
+											the model), Numpy, Opencv (For working with images) and STM32CubeMX software (For testing the models).</p>
+										<p><strong>Outcome: </strong>After Implementing the Gesture Recognition Model, different types of post training quantization
+											technique is used and analyzed using STM32CubeMX software. Among all the post-training quantization
+											techniques used, Integer only quantization reduces the size and as well as RAM consumption with 96%
+											accuracy.</p>
+										</ul>
+										
+									<hr class="major" />
+
+									<h2>MERS and SARS Classification using RNN and its Variants</h2>
+									<ul>
+										<p><strong>Duration/Period: </strong>1 Month</p>
+										<p><strong>Objective: </strong>To classify SARS-CoV and MERS-CoV nucleotide sequences using neural networks such as RNN</p>
+										<p><strong>Tools and Techinque: </strong>fastText, keras (RNN, LSTM, GRU, Bi-LSTM)</p>
+										<p><strong>Outcome: </strong>Accuracy of 99.8% is obtained with LSTM and fastText</p>
+										</ul>
+										
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="projects.html">Projects</a></li>
+										<li><a href="about.html">About</a></li>
+										
+									</ul>
+								</nav>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
